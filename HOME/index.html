@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCN COM - Digital Seva App</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- Base & Reset --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- Header & Navigation --- */
+        header { 
+            position: sticky; top: 0; z-index: 50; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #e0e7ff; 
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05); 
+        }
+        .header-container { max-width: 1150px; margin: 0 auto; padding: 12px 16px; display: flex; justify-content: space-between; items-center: center; }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; }
+        .logo-square { 
+            width: 40px; height: 40px; background: linear-gradient(to top right, #2563eb, #4f46e5); 
+            border-radius: 12px; display: flex; align-items: center; justify-content: center; 
+            color: white; font-weight: bold; box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5); 
+        }
+        .logo-text { font-size: 20px; font-weight: 800; color: #1e3a8a; letter-spacing: -1px; }
+        
+        nav.desktop-nav { display: none; gap: 24px; align-items: center; }
+        .nav-link { font-weight: 500; transition: 0.2s; color: #475569; }
+        .nav-link:hover { color: #2563eb; }
+        .active-link { color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 4px; }
+        .login-btn { background: #2563eb; color: white; padding: 6px 16px; border-radius: 9999px; font-size: 14px; border: none; cursor: pointer; }
+
+        /* --- Main Content --- */
+        main { max-width: 896px; margin: 0 auto; padding: 32px 16px; }
+        .hero { text-align: center; margin-bottom: 40px; }
+        .tagline { font-size: 14px; color: #64748b; font-style: italic; margin-bottom: 8px; }
+        
+        /* Animations */
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .live-badge { 
+            display: inline-flex; align-items: center; gap: 8px; background: #fef2f2; 
+            border: 1px solid #fee2e2; padding: 6px 16px; border-radius: 9999px; margin-bottom: 24px; 
+        }
+        .blink-dot { width: 8px; height: 8px; background: #dc2626; border-radius: 50%; animation: blink 1.5s infinite; }
+        .live-text { color: #b91c1c; font-size: 12px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+
+        .social-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 32px; }
+        .social-icon { 
+            width: 48px; height: 48px; border-radius: 50%; background: white; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: flex; 
+            align-items: center; justify-content: center; transition: 0.3s; 
+        }
+        .social-icon:hover { transform: scale(1.1); }
+
+        .profile-img-box { position: relative; display: inline-block; }
+        .img-container { 
+            width: 112px; height: 112px; border-radius: 16px; background: #e2e8f0; 
+            border: 4px solid white; shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+        }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .online-dot { 
+            position: absolute; bottom: -8px; right: -8px; width: 24px; height: 24px; 
+            background: #22c55e; border-radius: 50%; border: 2px solid white; 
+        }
+
+        /* --- Grid & Cards --- */
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+        .service-card { 
+            background: white; padding: 16px; border-radius: 12px; border: 1px solid #f1f5f9; 
+            text-align: center; transition: 0.3s; cursor: pointer; 
+        }
+        .service-card:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 24px; margin-bottom: 8px; }
+        .service-card p { font-size: 12px; font-weight: bold; }
+
+        .update-banner { 
+            background: white; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0; overflow: hidden; 
+        }
+        .banner-header { 
+            background: linear-gradient(to right, #1e293b, #0f172a); padding: 16px 24px; 
+            display: flex; justify-content: space-between; color: white; font-weight: bold; 
+        }
+        .banner-content { padding: 32px; text-align: right; }
+        .banner-title { font-size: 20px; font-weight: bold; color: #1d4ed8; margin-bottom: 16px; border-bottom: 4px solid #eff6ff; display: inline-block; }
+        .banner-desc { font-size: 18px; color: #475569; margin-bottom: 24px; line-height: 1.6; }
+        
+        .note-box { background: #fffbeb; border-left: 4px solid #fbbf24; padding: 20px; border-radius: 0 8px 8px 0; }
+        .note-title { display: flex; align-items: center; justify-content: flex-end; gap: 8px; color: #b45309; font-weight: 900; font-size: 14px; margin-bottom: 8px; }
+
+        /* --- Footer --- */
+        footer { margin-top: 64px; padding-bottom: 48px; text-align: center; }
+        .footer-title { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; color: #1e293b; margin-bottom: 24px; }
+        .line { height: 1px; width: 48px; background: #cbd5e1; }
+        .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 32px; }
+        .contact-btn { 
+            display: flex; align-items: center; gap: 8px; background: white; padding: 8px 16px; 
+            border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; font-weight: bold; font-size: 14px; 
+        }
+
+        /* --- Sidebar --- */
+        #side-menu { 
+            position: fixed; top: 0; left: 0; h-full: 100%; width: 256px; height: 100%;
+            background: white; z-index: 100; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
+            padding: 20px; transition: 0.3s; transform: translateX(-100%); 
+        }
+        .menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        .menu-nav { display: flex; flex-direction: column; gap: 16px; font-weight: 600; }
+        .menu-item { padding: 8px; border-bottom: 1px solid #f1f5f9; }
+
+        /* --- Media Queries --- */
+        @media (min-width: 768px) {
+            nav.desktop-nav { display: flex; }
+            .md-hidden { display: none; }
+            .services-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-wrap">
+                <div class="logo-square">KCN</div>
+                <h1 class="logo-text">KCN COMPUTER</h1>
+            </div>
+            
+            <button onclick="toggleMenu()" class="md-hidden" style="background: none; border: none; font-size: 24px; cursor: pointer;">
+                <i class="fas fa-bars"></i> 
+            </button>
+
+            <nav class="desktop-nav">
+                <a href="#" class="nav-link active-link">Home</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+                <button class="login-btn">Login</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <p class="tagline">There are available many tools & benefits.</p>
+            
+            <div class="live-badge">
+                <span class="blink-dot"></span>
+                <span class="live-text">Live</span>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Niish-k" class="social-icon" style="color: #ef4444;"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="https://www.facebook.com/share/1ArKgvmuW4/" class="social-icon" style="color: #1e40af;"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="https://t.me/complexseries" class="social-icon" style="color: #0ea5e9;"><i class="fab fa-telegram-plane text-xl"></i></a>
+            </div>
+
+            <div class="profile-img-box">
+                <div class="img-container">
+                    <img src="https://github.com/nitish624/KCN/blob/main/niti.jpg?raw=true" alt="Profile" />
+                </div>
+                <div class="online-dot"></div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div style="color: #f97316;"><i class="fas fa-id-card"></i></div>
+                <p>PAN Card</p>
+            </div>
+            <div class="service-card">
+                <div style="color: #3b82f6;"><i class="fas fa-file-invoice"></i></div>
+                <p>Caste/Income</p>
+            </div>
+            <div class="service-card">
+                <div style="color: #22c55e;"><i class="fas fa-voter-yea"></i></div>
+                <p>Voter ID</p>
+            </div>
+            <div class="service-card">
+                <div style="color: #a855f7;"><i class="fas fa-university"></i></div>
+                <p>Banking</p>
+            </div>
+        </div>
+
+        <div class="update-banner">
+            <div class="banner-header">
+                <span style="letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Latest Updates</span>
+                <i class="fas fa-bullhorn" style="color: #fbbf24;"></i>
+            </div>
+            
+            <div class="banner-content">
+                <p class="banner-title">किफायती मूल्य पर आवेदन हेतु</p>
+                <p class="banner-desc">
+                    <span style="font-weight: bold; color: #1e293b;">KCN COM</span> एक उपयुक्त जन सेवा केंद्र है। <br> 
+                    यहां हमारे CSC Centre से संबंधित सभी जानकारियां उपलब्ध होंगी।
+                </p>
+                
+                <div class="note-box">
+                    <div class="note-title">
+                        <span>Note - महत्वपूर्ण सूचना</span>
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p style="color: #334155; font-weight: 500;">
+                        यहां जाति, आय, निवास, NCL, PAN कार्ड, Voter ID कार्ड, आदि के लिए सफलतापूर्वक आवेदन करा सकते हैं।
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h4 class="footer-title">
+                <span class="line"></span>
+                Contact Us
+                <span class="line"></span>
+            </h4>
+            
+            <div class="contact-links">
+                <a href="#" class="contact-btn"><i class="fab fa-whatsapp" style="color: #22c55e;"></i> WhatsApp</a>
+                <a href="#" class="contact-btn"><i class="fas fa-envelope" style="color: #ef4444;"></i> Email</a>
+                <a href="#" class="contact-btn"><i class="fas fa-map-marker-alt" style="color: #3b82f6;"></i> Location</a>
+            </div>
+            
+            <p style="font-size: 12px; color: #94a3b8;">© 2026 KCN COMPUTER Digital Services. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <div id="side-menu">
+        <div class="menu-header">
+            <span style="font-weight: bold;">Menu</span>
+            <button onclick="toggleMenu()" style="background:none; border:none; font-size: 24px;">&times;</button>
+        </div>
+        <nav class="menu-nav">
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">Tabs - 2</a>
+            <a href="#" class="menu-item">Tabs - 3</a>
+            <a href="#" class="menu-item">Contact</a>
+        </nav>
+    </div>
+
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById('side-menu');
+        if (menu.style.transform === "translateX(0px)") {
+            menu.style.transform = "translateX(-100%)";
+        } else {
+            menu.style.transform = "translateX(0px)";
+        }
+    }
+    </script>
+</body>
+</html>

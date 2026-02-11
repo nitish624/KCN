@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCN COMPUTER - Digital Seva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/DOCUMENT/style.css">
+
+</head>
+<body>
+
+    <header>
+        <div id="header-main" class="logo-area">
+            <div class="logo-box">K</div>
+            <h1 class="logo-text">KCN COMPUTER</h1>
+        </div>
+
+        <div id="search-wrapper">
+            <input type="text" id="searchInput" onkeyup="filterResults()" placeholder="दस्तावेज खोजें (जैसे: jati, pan...)">
+            <button onclick="closeSearch()" class="close-search">&times;</button>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button onclick="openSearch()" class="icon-btn"><i class="fas fa-search"></i></button>
+            <button onclick="toggleMenu()" class="icon-btn" style="display: block;"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <div id="search-results"></div>
+    </header>
+
+    <main>
+        <p class="short-details">आवेदन के लिए आवश्यक दस्तावेज</p>
+        <div class="live-badge">
+            <span class="blink-dot"></span>
+            <span>Document List</span>
+        </div>
+
+        <div class="social-row">
+            <a href="https://www.youtube.com/@Niish-k" class="s-icon youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/share/1ArKgvmuW4/" class="s-icon fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/complexseries" class="s-icon tg"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+
+        <div class="notice-card">
+            <div class="notice-header">
+                <span style="font-weight: 700; letter-spacing: 1px;">IMPORTANT NOTICE</span>
+                <i class="fas fa-bullhorn" style="color: #fbbf24;"></i>
+            </div>
+            <div class="notice-body">
+                <h2 class="title-line">किफायती मूल्य पर आवेदन हेतु</h2>
+                <p class="main-text">
+                    <strong>KCN COMPUTER</strong> एक उपयुक्त जन सेवा केंद्र है। <br>
+                    यहाँ हमारे केंद्र से संबंधित सभी जानकारियाँ उपलब्ध होंगी।
+                </p>
+                <div class="note-box">
+                    <p style="color: #92400e; font-weight: 800; font-size: 0.8rem; margin-bottom: 5px;">NOTE - महत्वपूर्ण सूचना</p>
+                    <p style="color: #b45309; font-weight: 500;">यहाँ जाति, आय, निवास, PAN कार्ड, Voter ID कार्ड, आदि के लिए सफलतापूर्वक आवेदन करा सकते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="side-menu">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 800; color: #2563eb; font-size: 1.2rem;">MENU</span>
+            <button onclick="toggleMenu()" style="font-size: 2rem; border: none; background: none; color: #cbd5e1;">&times;</button>
+        </div>
+        <nav class="menu-nav">
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#" style="color: #dc2626;">Contact</a>
+        </nav>
+    </div>
+
+    <div id="docModal">
+        <div class="modal-content">
+            <h2 id="modalTitle" class="modal-title">Document</h2>
+            <p id="modalBody" class="modal-text">विवरण यहाँ दिखेगा...</p>
+            <button onclick="closeModal()" class="modal-btn">Samajh Gaya</button>
+        </div>
+    </div>
+    <script src="/DOCUMENT/script.js">
+    </script>
+</body>
+</html>
