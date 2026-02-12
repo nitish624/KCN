@@ -83,7 +83,7 @@
         .modal-title { font-size: 1.25rem; font-weight: 800; color: #1e3a8a; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
         .modal-text { text-align: right; line-height: 1.6; color: #475569; margin-bottom: 25px; }
         .modal-btn { 
-            width: 100%; background: #2563eb; color: white; border: none; 
+            width: 50%; background: #2563eb; color: white; border: none; 
             padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer;
         }
 
