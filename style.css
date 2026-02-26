@@ -114,12 +114,11 @@ main {
 }
 
 /* Animations */
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
 .live-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px; background: #fef2f2; 
+    gap: 8px;
+    background: #fef2f2; 
     border: 1px solid #fee2e2;
     padding: 6px 16px;
     border-radius: 9999px;
@@ -127,12 +126,12 @@ main {
 }
 
 .blink-dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background: #dc2626;
     border-radius: 50%;
-    animation: blink 1.5s infinit;
-}
+    animation: blink 1.5s infinite;
+}@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 .live-text {
     color: #b91c1c;
