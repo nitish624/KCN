@@ -225,6 +225,7 @@ main {
 
 .service-card img {
     height: 50px;
+    max-width: 120px;
 }
 
 .service-card p {
