@@ -10,18 +10,28 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="https://nitish624.github.io/KCN/style.css">
-        
-    </style>
 </head>
 <body>
 <header>
-    <div class="header-container">
+    <div id="header-main" class="header-container">
         <div class="logo-wrap">
             <div class="logo-square">KCN</div>
             <h1 class="logo-text">KCN Digital Seva</h1>
         </div>
-        <button onclick="toggleMenu()" class="md-hidden" style="background: none; border: none; font-size: 24px; cursor: pointer;">M<i class="fas fa-bars"></i> 
-        </button>
+        
+        <div id="search-wrapper">
+            <input type="text" id="searchInput" onkeyup="filterResults()" placeholder="Search here">
+            <button onclick="closeSearch()" class="close-search">&times;
+            </button>
+        </div>
+        
+        <div style="display: flex; gap: 12px; align-items: center;" self-align="left">
+            <button onclick="openSearch()" class="icon-btn" style="background: none; border: none; color :#64748b; font-size: 24px; cursor: pointer;"><i class="fas fa-search"></i>
+            </button>
+            <button onclick="toggleMenu()" class="md-hidden" style="background: none; border: none; font-size: 24px; cursor: pointer;"><i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
         <nav class="desktop-nav">
             <a href="N/index.html" class="nav-link active-link">Home
             </a>
@@ -38,6 +48,8 @@
 </header>
 
 <main>
+    <div id="resultDisplay" class="result-box"><h3>Search Results:</h3><div id="search-results-content"></div>
+    </div>
     <div class="hero">
         <p class="tagline">There are available many tools & benefits.
         </p>
@@ -60,44 +72,44 @@
 
 
 <div class="services-grid">
-    <a href="https://onlineservices.proteantech.in/paam/endUserRegisterContact.html">
-        <div class="service-card"><img src="https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg" /><p>PAN Card</p>
+    <a class="links" href="https://onlineservices.proteantech.in/paam/endUserRegisterContact.html" data-name="Voter Id">
+        <div class="service-card" data-name="Pan Card" data-url="https://onlineservices.proteantech.in/paam/endUserRegisterContact.html"><img src="https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg" /><p>PAN Card</p>
         </div>
     </a>
-    <a href="https://digitalseva.csc.gov.in/web/services">
-        <div class="service-card"><img src="https://etimg.etb2bimg.com/thumb/msid-122390998,width-1200,height-900,resizemode-4/.jpg" /><p>CSC Login</p>
+    <a class="links" href="https://digitalseva.csc.gov.in/web/services" data-name="CSC login">
+        <div class="service-card" data-name="CSC login"><img src="https://etimg.etb2bimg.com/thumb/msid-122390998,width-1200,height-900,resizemode-4/.jpg" /><p>CSC Login</p>
         </div>
     </a>
-    <a href="https://voters.eci.gov.in/">
-        <div class="service-card"><img src="https://raw.githubusercontent.com/nitish624/KCN/refs/heads/main/Img/vId.png" /><p>Voter ID</p>
+    <a class="links" href="https://voters.eci.gov.in/" data-name="Voter Id">
+        <div class="service-card" data-name="Voter Id"><img src="https://raw.githubusercontent.com/nitish624/KCN/refs/heads/main/Img/vId.png" /><p>Voter ID</p>
         </div>
     </a>
-    <a href="https://uidai.gov.in/en/">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhIlYUOBPRCHG9pVQbjLKFvE0LoE_34XtHu6H1v51ZxQ&s=10"  /><p>UIDAI</p>
+    <a class="links" href="https://uidai.gov.in/en/" data-name="UIDAI">
+        <div class="service-card" data-name="UIDAI"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhIlYUOBPRCHG9pVQbjLKFvE0LoE_34XtHu6H1v51ZxQ&s=10"  /><p>UIDAI</p>
         </div>
     </a>
-    <a href="https://serviceonline.bihar.gov.in/">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnCKDN4Kra_tTprkGTeIRyBymqWJ5t2EiCYQ20jmMo5A&s=10" /><p>RTPS BIHAR</p>
+    <a class="links" href="https://serviceonline.bihar.gov.in/" data-name="RTPS BIHAR">
+        <div class="service-card" data-name="RTPS BIHAR"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnCKDN4Kra_tTprkGTeIRyBymqWJ5t2EiCYQ20jmMo5A&s=10" /><p>RTPS BIHAR</p>
         </div>
     </a>
-    <a href="https://sarkariresult.com.cm/">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe6gw6Ru86bHWUZSRw07IpFBb2RWl0y98uoitGR5TJCA&s=10" /><p>Sarkari Result</p>
+    <a class="links" href="https://sarkariresult.com.cm/" data-name="sarkari result">
+        <div class="service-card" data-name="sarkari result"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe6gw6Ru86bHWUZSRw07IpFBb2RWl0y98uoitGR5TJCA&s=10" /><p>Sarkari Result</p>
         </div>    
     </a>
-    <a href="https://rconline.bihar.gov.in/">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDcKyNkKqHHxCJG8cZDVQSDscewk5So76Vllciy_reWw&s=10" /><p>Ration Bihar</p>
+    <a class="links" href="https://rconline.bihar.gov.in/" data-name="Pan Card">
+        <div class="service-card" data-name="ration bihar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDcKyNkKqHHxCJG8cZDVQSDscewk5So76Vllciy_reWw&s=10" /><p>Ration Bihar</p>
         </div>
     </a>
-    <a href="https://image.pi7.org/">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNFRmQ1jRBH0gC33uyn87sO5CqOev4AQkv0NVc7yBHA&s" /><p>Edit Photo/Doc.</p>
+    <a class="links" href="https://image.pi7.org/">
+        <div class="service-card" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNFRmQ1jRBH0gC33uyn87sO5CqOev4AQkv0NVc7yBHA&s" /><p>Edit Photo/Doc.</p>
         </div>
     </a>
-    <a href="https://www.pib.gov.in/indexd.aspx?reg=3&lang=2">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9XyczkLRddQBC7Vbd8v1Hw0wFQlCSGg58OX1lGrNuv6I0lXKU2QYoKo&s=10" /><p>PIB</p>
+    <a class="links" href="https://www.pib.gov.in/indexd.aspx?reg=3&lang=2" data-name="Pan Card">
+        <div class="service-card" data-name="Pan Card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9XyczkLRddQBC7Vbd8v1Hw0wFQlCSGg58OX1lGrNuv6I0lXKU2QYoKo&s=10" /><p>PIB</p>
         </div>
     </a>
-    <a href="https://nitish624.github.io/KCN/1.html">
-        <div class="service-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9HgbAAueyO38WJ9AWGspTWCFWMc8CS2mhdTKNtBcJw&s=10" /><p>Next</p>
+    <a class="links" href="https://nitish624.github.io/KCN/1.html" data-name="next">
+        <div class="service-card"  data-name="next"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9HgbAAueyO38WJ9AWGspTWCFWMc8CS2mhdTKNtBcJw&s=10" /><p>Next</p>
         </div>
     </a>
 </div>
@@ -174,6 +186,5 @@
 
 <script src="https://nitish624.github.io/KCN/script.js">
 </script>
-
 </body>
 </html>

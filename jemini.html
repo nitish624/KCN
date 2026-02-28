@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+   .result-box {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid #0056b3;
+}
+
+.search-results-content {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    /* Aapke cards ki basic styling */
+    text-align: center;
+    padding: 10px;
+}
+ 
+  </style>
+</head>
+
+<body>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search services (e.g. PAN, Voter)..." onkeyup="filterServices()">
+</div>
+
+<div id="resultDisplay" class="result-box" style="display: none;">
+    <h3>Search Results:</h3>
+    <div id="search-results-content"></div>
+</div>
+
+<div class="grid-container" id="mainGrid">
+    <div class="card" data-name="PAN Card">
+        <img src="pan-icon.png" alt="PAN">
+        <p>PAN Card</p>
+    </div>
+    <div class="card" data-name="">
+        <img src="voter-icon.png" alt="Voter">
+        <p>Voter ID</p>
+    </div>
+<script>
+  function filterServices() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.querySelectorAll('.grid-container .card');
+    let resultBox = document.getElementById('resultDisplay');
+    let resultContent = document.getElementById('search-results-content');
+    
+    // Clear previous results
+    resultContent.innerHTML = "";
+
+    if (input.length > 0) {
+        let found = false;
+        
+        cards.forEach(card => {
+            let name = card.getAttribute('data-name').toLowerCase();
+            if (name.includes(input)) {
+                // Agar match mila toh card ko result div mein clone karke dalo
+                let clone = card.cloneNode(true);
+                resultContent.appendChild(clone);
+                found = true;
+            }
+        });
+
+        if (found) {
+            resultBox.style.display = "block"; // Result box dikhao
+        } else {
+            resultContent.innerHTML = "<p>No results found</p>";
+            resultBox.style.display = "block";
+        }
+    } else {
+        resultBox.style.display = "none"; // Khali hone par chhupa do
+    }
+}
+
+</script>
+</body>
+
+</html>
