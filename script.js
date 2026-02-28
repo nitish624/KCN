@@ -1,4 +1,4 @@
-// Menu function 
+// function 
 function toggleMenu() {
     const menu = document.getElementById('side-menu');
     if (menu.style.transform === "translateX(0px)") {
