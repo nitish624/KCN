@@ -239,6 +239,30 @@ main {
     gap: 16px;
     margin-bottom: 40px;
 }
+#search-results-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+#search-results-content .service-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid blue; 
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer; 
+    width: 130px;
+    box-sizing: border-box;
+}
+
+#search-results-content .service-card img {
+    height: 50px;
+    max-width: 100px;
+}
 
 .service-card {
     background: white;
@@ -248,6 +272,14 @@ main {
     text-align: center;
     transition: 0.3s;
     cursor: pointer; 
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#resultDisplay {
+    overflow: hidden;
+    width: 95%;
+    margin: auto
 }
 
 .service-card:hover {

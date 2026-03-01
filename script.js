@@ -26,7 +26,7 @@ function openSearch() {
         });
         
 // filtered search results
-function filterResults() {
+/*function filterResults() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let links = document.querySelectorAll('.services-grid .links');
     let resultBox = document.getElementById('resultDisplay');
@@ -64,5 +64,63 @@ function filterResults() {
         }
     } else {
         resultBox.style.display = "none";
+    }
+}
+*/
+
+async function filterResults() {
+    let Input = document.getElementById('searchInput').value.toLowerCase();
+    let ResultBox = document.getElementById('resultDisplay');
+    let resultContent = document.getElementById('search-results-content');
+    let localLinks = document.querySelectorAll('.services-grid .links');
+    
+    resultContent.innerHTML = "";
+    
+    if (Input.length > 0) {
+        let found = false;
+        
+        // 1. Apni Website ke Local Cards check karein
+        localLinks.forEach(link => {
+            let card = link.querySelector('.service-card');
+            let nameAttr = card ? card.getAttribute('data-name') : null;
+            if (nameAttr && nameAttr.toLowerCase().includes(Input)) {
+                resultContent.appendChild(link.cloneNode(true));
+                found = true;
+            }
+        });
+        
+        // 2. JSON File se External Data Fetch Karein
+        try {
+            // Apni dusri site ki JSON file ka link yahan dalein
+            const response = await fetch('https://nitish624.github.io/KCN/services.json');
+            const externalData = await response.json();
+            
+            externalData.forEach(item => {
+                if (item.name.toLowerCase().includes(Input)) {
+                    // Naya Card HTML banayein
+                    let externalCard = `
+            <a href="${item.url}" class="links" target="_blank">
+                <div class="service-card" style="border: 2px solid blue; ">
+                                <img src="${item.img}" alt="${item.name}" >
+                                <p>${item.name}</p>
+                </div>
+            </a>`;
+                    
+                    resultContent.insertAdjacentHTML('beforeend', externalCard);
+                    found = true;
+                }
+            });
+        } catch (err) {
+            console.warn("JSON fetch failed:", err);
+        }
+        
+        if (found) {
+            ResultBox.style.display = "block";
+        } else {
+            resultContent.innerHTML = "<p style='text-align:center; color:blue;'>No results found</p>";
+            ResultBox.style.display = "block";
+        }
+    } else {
+        ResultBox.style.display = "none";
     }
 }
