@@ -1,8 +1,8 @@
 [
   {
     "name": "RTPS BIHAR",
-    "url": "https://rtps.bihar.gov.in/",
-    "img": "rtps-logo.png",
+    "url": "https://serviceonline.bihar.gov.in/",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnCKDN4Kra_tTprkGTeIRyBymqWJ5t2EiCYQ20jmMo5A&s=10",
     "process": "apply",
     "type": "home"
   },
@@ -20,158 +20,60 @@
 "process": "apply",
 "type": "external"
   },
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "CSC Login",
+  "url": "https://digitalseva.csc.gov.in/web/services",
+  "img": "https://etimg.etb2bimg.com/thumb/msid-122390998,width-1200,height-900,resizemode-4/.jpg",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "UIDAI",
+  "url": "https://uidai.gov.in/en/" ,
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhIlYUOBPRCHG9pVQbjLKFvE0LoE_34XtHu6H1v51ZxQ&s=10",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "Voter Id | EPIC",
+  "url": "https://voters.eci.gov.in/",
+  "img": "https://raw.githubusercontent.com/nitish624/KCN/refs/heads/main/Img/vId.png",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "Sarkari Result",
+  "url": "https://sarkariresult.com.cm/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe6gw6Ru86bHWUZSRw07IpFBb2RWl0y98uoitGR5TJCA&s=10",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "BIHAR Ration",
+  "url": "https://rconline.bihar.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDcKyNkKqHHxCJG8cZDVQSDscewk5So76Vllciy_reWw&s=10",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "Edit Photo/Doc.",
+  "url": "https://image.pi7.org/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNFRmQ1jRBH0gC33uyn87sO5CqOev4AQkv0NVc7yBHA&s",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "PIB",
+  "url": "https://www.pib.gov.in/indexd.aspx?reg=3&lang=2",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9XyczkLRddQBC7Vbd8v1Hw0wFQlCSGg58OX1lGrNuv6I0lXKU2QYoKo&s=10",
   "process": "apply",
   "type": "home"
 },
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+  {
+  "name": "Next",
+  "url": "https://nitish624.github.io/KCN/1.html",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9HgbAAueyO38WJ9AWGspTWCFWMc8CS2mhdTKNtBcJw&s=10",
   "process": "apply",
   "type": "home"
-},
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
-  "process": "apply",
-  "type": "home"
-},
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
-  "process": "apply",
-  "type": "home"
-},
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-},
-{
-  "name": "PAN Card",
-  "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-  "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
-  "process": "apply",
-  "type": "home"
-},
-{
-  "name": "GitHub",
-  "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
-  "process": "apply",
-  "type": "external"
-}
+  }
 ]
