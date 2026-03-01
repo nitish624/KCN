@@ -2,16 +2,22 @@
   {
     "name": "RTPS BIHAR",
     "url": "https://rtps.bihar.gov.in/",
-    "img": "rtps-logo.png"
+    "img": "rtps-logo.png",
+    "process": "apply",
+    "type": "home"
   },
   {
     "name": "PAN Card",
     "url": "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-    "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg"
+    "img": "https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg",
+    "process": "apply",
+    "type": "home"
   },
   {
   "name": "GitHub",
   "url": "https://github.com/",
-  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10"
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
+"process": "apply",
+"type": "external"
   }
 ]
