@@ -17,101 +17,25 @@ function openSearch() {
             document.getElementById('searchInput').focus();
         }
         function closeSearch() {
-            document.getElementById('header-main').classList.remove('visible-invisible');
-            document.getElementById('search-wrapper').style.display = 'none';
-            document.getElementById('searchInput').value = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") closeSearch();
-        });
-        
-// filter function 
-/*
-async function filterResults() {
-    let Input = document.getElementById('searchInput').value.toLowerCase();
-    let ResultBox = document.getElementById('resultDisplay');
-    let resultContent = document.getElementById('search-results-content');
-    let localLinks = document.querySelectorAll('.home-grid .links');
+    // 1. Header aur Search Wrapper ko handle karein
+    document.getElementById('header-main').classList.remove('visible-invisible');
+    document.getElementById('search-wrapper').style.display = 'none';
     
-    resultContent.innerHTML = "";
+    // 2. Input box ko khali karein
+    document.getElementById('searchInput').value = '';
     
-    if (Input.length > 0) {
-        let found = false;
-        
-        // 1. Apni Website ke Local Cards check karein
-        localLinks.forEach(link => {
-            let card = link.querySelector('.service-card');
-            let nameAttr = card ? card.getAttribute('data-name') : null;
-            if (nameAttr && nameAttr.toLowerCase().includes(Input)) {
-                resultContent.appendChild(link.cloneNode(true));
-                found = true;
-            }
-        });
-        
-        // 2. JSON File se External Data Fetch Karein
-        try {
-            // Apni dusri site ki JSON file ka link yahan dalein
-            const response = await fetch('https://nitish624.github.io/KCN/services.json');
-            const externalData = await response.json();
-            
-            externalData.forEach(item => {
-                if (item.name.toLowerCase().includes(Input)) {
-                    // Naya Card HTML banayein
-                    let externalCard = `
-                    
-    <div class="card-container" style="position:relative;">
-        <span class="info-btn" onclick="showProcess(event, '${item.process}')" >info</span>
-            <a href="${item.url}" class="links" target="_blank">
-                <div class="service-card" style="border: 2px solid blue; ">
-                                <img src="${item.img}" alt="${item.name}" >
-                                <p>${item.name}</p>
-                </div>
-            </a></div>`;
-                    
-                    resultContent.insertAdjacentHTML('beforeend', externalCard);
-                    found = true;
-                }
-            });
-        } catch (err) {
-            console.warn("JSON fetch failed:", err);
-        }
-        
-        if (found) {
-            ResultBox.style.display = "block";
-        } else {
-            resultContent.innerHTML = "<p style='text-align:center; color:blue;'>No results found</p>";
-            ResultBox.style.display = "block";
-        }
-    } else {
-        ResultBox.style.display = "none";
+    // 3. Result box ko function ke ANDAR hide karein (YE ZAROORI HAI)
+    let resultBox = document.getElementById('resultDisplay');
+    if (resultBox) {
+        resultBox.style.display = 'none';
     }
 }
 
-// Modal HTML ko body mein add karein (Ek hi baar)
-document.body.insertAdjacentHTML('beforeend', `
-    <div id="infoModal" class="modal-overlay">
-        <div class="modal-content">
-            <h3>Info about</h3>
-            <p id="processText"></p>
-            <button class="close-modal" onclick="closeModal()">Close</button>
-        </div>
-    </div>
-`);
-
-function showProcess(event, text) {
-    // Ye line website khulne se rokegi
-    event.preventDefault(); 
-    event.stopPropagation(); 
-
-    document.getElementById('processText').innerText = text;
-    document.getElementById('infoModal').style.display = 'flex';
-}
-
-
-function closeModal() {
-    document.getElementById('infoModal').style.display = 'none';
-}
-*/
+// Escape key dabane par function call hoga
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeSearch();
+});
+        
 
 
 
