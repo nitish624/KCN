@@ -1,71 +1,90 @@
-// toggle function 
+// 1. Global Variables (Top of the file)
+let isLoggedIn = false; 
+
+// 2. Toggle Menu Function
 function toggleMenu() {
     const menu = document.getElementById('side-menu');
     if (menu.style.transform === "translateX(0px)") {
         menu.style.transform = "translateX(-100%)";
-    }
-    else {
-        menu.style.transform =
-            "translateX(0px)";
+    } else {
+        menu.style.transform = "translateX(0px)";
     }
 }
 
-   // search
+// 3. Search UI Functions
 function openSearch() {
     document.getElementById('header-main').classList.add('visible-invisible');
-        document.getElementById('search-wrapper').style.display = 'flex';
-            document.getElementById('searchInput').focus();
-        }
-        function closeSearch() {
-    // 1. Header aur Search Wrapper ko handle karein
+    document.getElementById('search-wrapper').style.display = 'flex';
+    document.getElementById('searchInput').focus();
+}
+
+function closeSearch() {
     document.getElementById('header-main').classList.remove('visible-invisible');
     document.getElementById('search-wrapper').style.display = 'none';
-    
-    // 2. Input box ko khali karein
     document.getElementById('searchInput').value = '';
-    
-    // 3. Result box ko function ke ANDAR hide karein (YE ZAROORI HAI)
     let resultBox = document.getElementById('resultDisplay');
-    if (resultBox) {
-        resultBox.style.display = 'none';
-    }
+    if (resultBox) resultBox.style.display = 'none';
 }
 
-// Escape key dabane par function call hoga
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") closeSearch();
+// 4. Login Functionality (Multiple Passwords)
+document.querySelectorAll('.login-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        const userPass = prompt("Enter Password to Unlock All Services:");
+        if (!userPass) return;
+
+        try {
+            const response = await fetch('https://nitish624.github.io/KCN/services.json');
+            const data = await response.json();
+            
+            // Password verification logic
+            if (data.passwords && data.passwords.includes(userPass)) {
+                isLoggedIn = true; 
+                alert("Login Successful! All hidden cards are now visible.");
+                loadHomeCards(); // UI Refresh
+                if(document.getElementById('searchInput').value) filterResults();
+            } else {
+                alert("Incorrect Password!");
+            }
+        } catch (err) {
+            console.error("Login Error:", err);
+        }
+    });
 });
-        
 
-
-
-
-
-// 1. Common Template: Jo har jagah ek jaisa card banayega
+// 5. Card Template
 function createCardTemplate(item) {
     return `
-        <div class="card-container" style="position:relative; display:inline-block;">
-            <span class="info-btn" onclick="showProcess(event, '${item.process}')">info</span>
-            <a href="${item.url}" class="links" target="_blank">
-                <div class="service-card" data-name="${item.name}">
-                    <img src="${item.img}" >
-                    <p style="font-size:14px; margin:5px 0;">${item.name}</p>
-                </div>
-            </a>
-        </div>`;
+    <div class="card-container" style="position:relative; display:inline-block;">
+        <span class="info-btn" onclick="showProcess(event, '${item.process || 'No info available'}')">inf</span>
+        <a href="${item.url}" class="links" target="_blank">
+            <div class="service-card" data-name="${item.name}">
+                <img src="${item.img}">
+                <p style="font-size:14px; margin:5px 0;">${item.name}</p>
+            </div>
+        </a>
+    </div>`;
 }
 
-// 2. Home Load Function: Sirf wahi jinki type "home" hai
+// 6. Load Home Cards (Fixed for new JSON structure)
 async function loadHomeCards() {
     try {
         const response = await fetch('https://nitish624.github.io/KCN/services.json');
         const data = await response.json();
-        const homeGrid = document.getElementById('home-grid'); // Aapka Home container ID
         
+        // Zaroori Check: Kya data.services ek array hai?
+        if (!data.services || !Array.isArray(data.services)) {
+            throw new TypeError("JSON mein 'services' array nahi mila!");
+        }
+
+        const homeGrid = document.getElementById('home-grid'); 
         let homeHtml = "";
-        data.forEach(item => {
+        
+        data.services.forEach(item => {
             if (item.type === "home") {
-                homeHtml += createCardTemplate(item);
+                // Restricted Card Logic: Login ke bina hide rahega
+                if (!item.restricted || isLoggedIn) {
+                    homeHtml += createCardTemplate(item);
+                }
             }
         });
         homeGrid.innerHTML = homeHtml;
@@ -74,7 +93,7 @@ async function loadHomeCards() {
     }
 }
 
-// 3. Search Function: Jo pure JSON (Sare Cards) ko search karega
+// 7. Search/Filter Results
 async function filterResults() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let resultBox = document.getElementById('resultDisplay');
@@ -88,17 +107,17 @@ async function filterResults() {
     try {
         const response = await fetch('https://nitish624.github.io/KCN/services.json');
         const data = await response.json();
-        
         let searchHtml = "";
         let found = false;
 
-        data.forEach(item => {
+        data.services.forEach(item => {
             if (item.name.toLowerCase().includes(input)) {
-                searchHtml += createCardTemplate(item);
-                found = true;
+                if (!item.restricted || isLoggedIn) {
+                    searchHtml += createCardTemplate(item);
+                    found = true;
+                }
             }
         });
-
         resultContent.innerHTML = found ? searchHtml : "<p>No results found</p>";
         resultBox.style.display = "block";
     } catch (err) {
@@ -106,11 +125,11 @@ async function filterResults() {
     }
 }
 
-// Modal HTML ko body mein add karein (Ek hi baar)
+// 8. Modal Functions
 document.body.insertAdjacentHTML('beforeend', `
     <div id="infoModal" class="modal-overlay">
         <div class="modal-content">
-            <h3>Info about the service</h3>
+            <h3>Service Information</h3>
             <p id="processText"></p>
             <button class="close-modal" onclick="closeModal()">Close</button>
         </div>
@@ -118,26 +137,15 @@ document.body.insertAdjacentHTML('beforeend', `
 `);
 
 function showProcess(event, text) {
-    // Ye line website khulne se rokegi
     event.preventDefault(); 
     event.stopPropagation(); 
-
     document.getElementById('processText').innerText = text;
     document.getElementById('infoModal').style.display = 'flex';
 }
-
 
 function closeModal() {
     document.getElementById('infoModal').style.display = 'none';
 }
 
-// 4. Modal Fix: Taki website na khule
-function showProcess(event, text) {
-    event.preventDefault();
-    event.stopPropagation();
-    document.getElementById('processText').innerText = text;
-    document.getElementById('infoModal').style.display = 'flex';
-}
-
-// Page load par chalu karein
+// Initialize
 window.onload = loadHomeCards;

@@ -1,4 +1,8 @@
-[
+{
+"passwords": [
+ "123", "234", "345"
+],
+"services": [
   {
     "name": "RTPS BIHAR",
     "url": "https://serviceonline.bihar.gov.in/",
@@ -15,6 +19,7 @@
   },
   {
   "name": "GitHub",
+  "restricted": "false",
   "url": "https://github.com/",
   "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEjPpeA7glY0y1l1dN9VcxHoI1iv-nKfkEQLHD6BZTn2h7d3M5WDCTUTc&s=10",
 "process": "apply",
@@ -64,6 +69,7 @@
 },
   {
   "name": "PIB",
+  "restricted": "false",
   "url": "https://www.pib.gov.in/indexd.aspx?reg=3&lang=2",
   "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9XyczkLRddQBC7Vbd8v1Hw0wFQlCSGg58OX1lGrNuv6I0lXKU2QYoKo&s=10",
   "process": "apply",
@@ -71,9 +77,417 @@
 },
   {
   "name": "Next",
+  "restricted": "true",
   "url": "https://nitish624.github.io/KCN/1.html",
   "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9HgbAAueyO38WJ9AWGspTWCFWMc8CS2mhdTKNtBcJw&s=10",
   "process": "apply",
   "type": "home"
-  }
+  },
+{
+  "name": "Google Console",
+  "restricted": "true",
+  "url": "https://search.google.com/search-console/welcome?utm_source=about-page",
+  "img": "https://wonkrew.com/wp-content/uploads/2022/10/Google-Search-Console-logo-Wonkrew-1024x614.png",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "CTS Corporation",
+  "restricted": "true",
+  "url": "https://dgt.gov.in/en/cts-details",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdEmnXqyQpt_d8R-supTjE_52DruEp6Rn2erIaIcbNw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Job4You India",
+  "restricted": "true",
+  "url": "https://job4youindia.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKASLwqtLt_S-qzAdhPYZH-7WOrX33DvhNu4eMPq9Fzg&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "BhuNaksha Bihar",
+  "url": "https://bhunaksha.bihar.gov.in/10/index.jsp",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqpDJy1xwcLyxCjjmzbR0PkN26HCEewu7L6ZGSYDyw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Meri Pehchaan",
+  "url": "https://www.applykare.in/wp-content/uploads/2022/10/jan-parichay-login.jpg",
+  "img": "https://play-lh.googleusercontent.com/0pyqGxdVkQsZUyWiDkvlUHRfCNcHdFS9Sq8G-GpCl9Idvd2fEUakpboNxqlMNVdDqMA",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "DigiLocker",
+  "url": "https://www.digilocker.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvg8DQ6VzaJIcOvF9CEb7yXQhYOtMwBIM-aw5e7NxRUQ&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "NSP",
+  "url": "https://scholarships.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHuEHrrBK_kLs1nkzB6-T2np_grHShNHHtfa59SKaj0g&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "KGS Current Affairs",
+  "restricted": "true",
+  "url": "https://currentaffairs.khanglobalstudies.com/topics/newspaper-highlights/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoeefCzPxYQCHJkS_OZJihEBHMthWTfBEneBTl7PSNoA&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Alibaba",
+  "restricted": "true",
+  "url": "https://www.alibaba.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGvwdzT9JHJQbdBZE1Po-T6xU_AqBEEwegjE6ksVoTgg&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "UPWORK",
+  "restricted": "true",
+  "url": "https://www.upwork.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8iIZ_H2Rc9bSebRsLM4pweb-9B5tYQJ575mSNbf7gg&s",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "AI+",
+  "restricted": "true",
+  "url": "https://aiplusstore.com/?srsltid=AfmBOoofzJuy40fXRW8BYxs4Hp2JlAJW8Za35SO5N7uUYoqmU1NWvxRK",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPTqJlpXtMsIOt3gNSKTY_h4n4tc-YKNUzhA&s",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "LNMU",
+  "url": "https://www.lnmu.ac.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh1Kxu6gWPq1Ua_DVhAhHP4pP6sInPzuC-ZcImPnKlxjU4xqBHGXB-c0&s",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Technical Bot",
+  "url": "https://technical-bot.blogspot.com/2023/03/termuxs-android-12-issue-fixed-signal-9.html?m=1",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaaYAYnrWpdLD2h3hYOx-X-x0rDlPdS1rexi1-WsujvKgSXfzQk2qvR7w&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "CDN Coding",
+  "url": "https://cdnjs.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBy9eP28iS_hAUYr7Bo8yk4WmI1Thw130wbFEZoazaQQ&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "BG remove",
+  "url": "https://www.remove.bg/",
+  "img": "https://play-lh.googleusercontent.com/0pyqGxdVkQsZUyWiDkvlUHRfCNcHdFS9Sq8G-GpCl9Idvd2fEUakpboNxqlMNVdDqMA",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Parivahan",
+  "url": "https://parivahan.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2KKTG1_LJIKIJ2tmuzFLQm0Ip5Wo8OeFtQiVz7k4xIA&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Sanchar Sathi",
+  "url": "https://www.sancharsaathi.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQo5eMa68fbz_17Nb3qHYOvUjF8enwkocILiprCt5hBg&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "UMANG",
+  "url": "https://web.umang.gov.in/landing/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Xu4d1ZTFNLVesSE5bUCDNB_prXM35WvlO57nmqOZQIkLIcG2iV_kYNY&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Bihar Sarkar",
+  "url": "https://state.bihar.gov.in/main/CitizenHome.html",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzEpIlEWDMN_kThnKl5E2fZ0QIkEY_JLjlOuHiguWs-bNzriHJJ7485_64zGZF0D9KHQCpOqrvh7iWLYft2mnK2lQfSsR6Y5PXtU7nnAS&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "National Portal",
+  "url": "https://www.india.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSiESRXEOCgNS_lldLOh5k2ZqJwz6AeKmHu2IkRfvtxw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "ISRO",
+  "url": "https://www.isro.gov.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPzPkz8yZmlpCvJ1skSBJRsvm0dU93ee6--xJx0iIklw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Tinywow [Tools]",
+  "url": "https://tinywow.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAeAZLTFgwSKYh2mQfmYZbWe-ArhfNU7JEOailfBg6P85D9_Vwz41fGaOK&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Fact verify",
+  "url": "https://factly.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-knYxAzM3-pJRIFfWN50KDp6jBc-TlVJzPG3DOAXqw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Photopea [Photoshop]",
+  "url": "https://www.photopea.com/",
+  "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Photopea_logo.svg/500px-Photopea_logo.svg.png",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Excel",
+  "url": "https://excel.cloud.microsoft/en-gb/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5abUEnIV85WCPDoiGX6N10E0NvA5nwjaeyKzyHnUP2A&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "MsWord",
+  "url": "https://www.google.com/url?q=https://word.cloud.microsoft/open/onedrive/?docId%3DAD4AF6DED53B0C7B%2521sd1bf257833924d35928a3808e5e28199%26driveId%3DAD4AF6DED53B0C7B&usg=AOvVaw1gba31KgNzugbg6hn3O0RT&cs=1&hl=en-IN",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4cowtIkjEL4g8yzZ-sGSyr7WY7C2fs9RwYoOz1gpYYQ&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Tag Generator",
+  "url": "https://rapidtags.io/generator",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu455BahJV4FUR3qZOBlbnudrrOm3r8zP2-N4FkxrdGQ&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Canva",
+  "url": "https://www.google.com/url?q=https://www.canva.com/en_in/&usg=AOvVaw2TDdAHuNq6gaI56IrhggcW&cs=1&hl=en-IN",
+  "img": "https://replacehumans.ai/wp-content/uploads/2025/01/Untitled-design-2025-01-28T101702.381.png",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "NASA",
+  "url": "https://www.nasa.gov/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBCwXwCaT3wmOsRApANMTWn9NTjz67NQKbVWGXKdxQw&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Find Decvice",
+  "url": "https://www.google.com/android/find/?login&cs=1&hl=en-IN",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjumooA9c0JXLPbI7pGanVIMkHP_ZnOoXPzVqFiwAgzMydZPIS1l-lliTM&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "NPCI",
+  "url": "https://www.npci.org.in/",
+  "img": "https://images.financialexpressdigital.com/2025/04/npci.X.jpg",
+  "process": "Refund debited money | menuBar > customer > UPI Complaint > fill form & Submit | refund money under 10 days",
+  "type": "external"
+},
+{
+  "name": "Text to audio",
+  "url": "https://ttsmp3.com/ai",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxdpPEZzhIHGd33qZGzKeMURcHGRtR9q37LiLQHnbtg&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Pinterest",
+  "url": "https://in.pinterest.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0aHc_6IDfNYqYgc-H5dgOE7-tCeagW7YvPM_xUc8mhA&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "ColorPallete",
+  "url": "https://coolors.co/d8e2dc-3c3744-090c9b-db5461-3185fc",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrDrlJ5yTRQrJAIwtnecjmaH5WG9u4_lBuGaWcPgQpDKD_YW3jwDD4mrNW&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "FontAwesome",
+  "url": "https://fontawesome.com/search?q=Doller&o=r",
+  "img": "https://d11a6trkgmumsb.cloudfront.net/original/4X/0/8/6/086b959b3dc677574eab03bc12eea5a03deeec70.png",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Kali NetHunter",
+  "url": "https://www.kali.org/docs/nethunter/nethunter-rootless/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmyQ2pDbXzxFTVZ2_eZpZPrRYDQwTZUBB-VRoL3OVFZ8VGg7ck99K_sYA&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Odoo",
+  "url": "https://www.odoo.com/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RCEO9-YrYnwg_2ZG5WSA-rGOAovKS7vx1gnmeQy4aA&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "MDN Doc.",
+  "url": "https://www.google.com/url?q=https://developer.mozilla.org/en-US/&usg=AOvVaw3aOAQtr3ceb3mCRbzlCO6N&cs=1&hl=en-IN",
+  "img": "https://www.zdnet.com/a/img/resize/1647b28f05855292c06d8be1a6440860021e4afe/2022/03/01/33b5e401-651b-4108-8fcf-6b6fa5670039/screen-shot-2022-03-01-at-11-24-49-am.png?auto=webp&fit=crop&height=900&width=1200",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "IGNOU",
+  "url": "https://ignouadmission.samarth.edu.in/index.php/site/programme-detail?id=adf22580e54e5e5de4858e34d317ae2ee901df648875b9a60b728f6ddbe5c7ed1837",
+  "img": "https://upload.wikimedia.org/wikipedia/en/c/c1/IGNOU_logo.svg",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "LinkedIn",
+  "url": "https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fcollections%2Frecommended%2F%3FcurrentJobId%3D4286876950",
+  "img": "https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2022/08/Linkedin-Logo-e1660320077673.png",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "Freelancer",
+  "url": "https://www.freelancer.in/",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_vjOjvj_V5ThHpZn3iPEjCOSzV3U5on4u7XmouHnig&s=10",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+},
+{
+  "name": "",
+  "url": "",
+  "img": "",
+  "process": "apply",
+  "type": "external"
+}
 ]
+}
