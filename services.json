@@ -438,18 +438,18 @@
   "type": "external"
 },
 {
-  "name": "",
-  "searchName": "",
-  "url": "",
-  "img": "",
+  "name": "Naukri",
+  "searchName": "all || Naukri",
+  "url": "https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en_IN",
+  "img": "https://yt3.googleusercontent.com/O0mMM5E1ynLDCKCP125bREm2wNcFAaAAc10AUnTw4NlgJwhqNIHKOcthJ6nigWNL5I5FMokT6w=s900-c-k-c0x00ffffff-no-rj",
   "process": "apply",
   "type": "external"
 },
 {
-  "name": "",
+  "name": "KGS TEST",
   "searchName": "",
-  "url": "",
-  "img": "",
+  "url": "https://www.khanglobalstudies.com/open-test",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdmn3HEgUp2-kd9t-mVCbmJpP1HKlyXgOf5oQQL2EM8w&s=10",
   "process": "apply",
   "type": "external"
 },
