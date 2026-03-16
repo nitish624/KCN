@@ -39,7 +39,7 @@ document.querySelectorAll('.login-btn').forEach(btn => {
             // Password verification logic
             if (data.passwords && data.passwords.includes(userPass)) {
                 isLoggedIn = true; 
-                alert("Login Successful! All hidden cards are now visible.");
+                alert("Logged In");
                 loadHomeCards(); // UI Refresh
                 if(document.getElementById('searchInput').value) filterResults();
             } else {
@@ -55,7 +55,7 @@ document.querySelectorAll('.login-btn').forEach(btn => {
 function createCardTemplate(item) {
     return `
     <div class="card-container" style="position:relative; display:inline-block;">
-        <span class="info-btn" onclick="showProcess(event, '${item.process || 'No info available'}')">inf</span>
+        <span class="info-btn" onclick="showProcess(event, '${item.process || 'No info available'}')">inf.</span>
         <a href="${item.url}" class="links" target="_blank">
             <div class="service-card" data-name="${item.name}">
                 <img src="${item.img}">
@@ -94,6 +94,7 @@ async function loadHomeCards() {
 }
 
 // 7. Search/Filter Results
+// 7. Search/Filter Results (Updated to use searchName)
 async function filterResults() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let resultBox = document.getElementById('resultDisplay');
@@ -111,19 +112,25 @@ async function filterResults() {
         let found = false;
 
         data.services.forEach(item => {
-            if (item.name.toLowerCase().includes(input)) {
+            // Hum 'searchName' se match kar rahe hain
+            // Fallback: Agar searchName nahi hai, toh name se check karega
+            let nameToSearch = (item.searchName || item.name).toLowerCase();
+
+            if (nameToSearch.includes(input)) {
                 if (!item.restricted || isLoggedIn) {
                     searchHtml += createCardTemplate(item);
                     found = true;
                 }
             }
         });
+        
         resultContent.innerHTML = found ? searchHtml : "<p>No results found</p>";
         resultBox.style.display = "block";
     } catch (err) {
         console.error("Search error:", err);
     }
 }
+
 
 // 8. Modal Functions
 document.body.insertAdjacentHTML('beforeend', `
